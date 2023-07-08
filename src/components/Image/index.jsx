@@ -1,10 +1,12 @@
-export const Imagen = (props) => {
-
-    const {src,width,height,alt,className} = props;
+export const Image = () => {
 
     return(
         <>
-            <img src={require(src)} alt={alt} width={width} height={height} className={className}/>
+            <img className="mx-auto rounded-full img_photo custom_shadow_orange border-2 border-orange-700"
+              src="@assets/myphoto/myphoto1.png"
+              width="500px"
+              height="500px"
+              alt="myphoto"/>
         </>
     )
 }

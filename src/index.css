@@ -17,18 +17,27 @@ body::-webkit-scrollbar-thumb{
 }
 
 .custom_shadow_orange{
-  -moz-box-shadow: -2px -2px 2.5px 3px #9a3412;
-  -webkit-box-shadow: -2px -2px 2.5px 3px #9a3412;
-  box-shadow: -2px -2px 2.5px 3px #9a3412;
+  -moz-box-shadow: -2px -2px 2.5px 3px #FF5733;
+  -webkit-box-shadow: -2px -2px 2.5px 3px #FF5733;
+  box-shadow: -2px -2px 2.5px 3px #FF5733;
 }
 
-.img_photo{
-  filter: drop-shadow(0px 0px 6px #9a3412)
+.filter_shadow_orange{
+  filter: drop-shadow(0px 0px 6px #FF5733)
+}
+
+.filter_shadow_yellow{
+  filter: drop-shadow(0px 0px 6px #FFC300);
+  -webkit-animation-name: animate_idea;
+  animation-name: animate_idea;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
 }
 
 .logo_animate{
   animation-name: breathing;
-  -webkit-animation: breathing;
+  -webkit-animation-name: breathing;
   animation-duration: 5s;
   animation-delay: 1s;
   animation-iteration-count: infinite;
@@ -49,6 +58,28 @@ body::-webkit-scrollbar-thumb{
 
 .custom_contact_icons{
   @apply cursor-pointer transition duration-500 ease-out hover:scale-[115%]
+}
+
+@-webkit-keyframes animate_idea{
+  from{
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }to{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes animate_idea{
+  from{
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }to{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 }
 
 @-webkit-keyframes breathing {
