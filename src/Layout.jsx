@@ -8,7 +8,7 @@ function Layout() {
     <>
       <Header/>
         <Suspense fallback={null}>
-          <main className="pt-[4.9em] pb-0.5 bg-gradient-to-br from-gray-900 from-50% to-orange-600">
+          <main className="pt-[4.9em] pb-0.5 bg-gradient-to-br from-gray-900 from-50% to-orange-700">
               <Outlet/>
           </main>
         </Suspense>

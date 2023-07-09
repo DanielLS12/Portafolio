@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="flex items-center">
-        <div className="text-white text-base min-[295px]:text-lg sm:text-xl flex flex-col gap-6 lg:gap-8 lg:flex-row px-2">
+        <div className="text-white text-base min-[295px]:text-lg sm:text-xl flex flex-col gap-6 lg:gap-8 lg:flex-row">
           {infoNavLinks.map((data, index) => (
             <NavLink
               to={`/${data.title}`}

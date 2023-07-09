@@ -13,13 +13,7 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-thumb{
-  background-color: rgb(214, 76, 2);
-}
-
-.custom_shadow_orange{
-  -moz-box-shadow: -2px -2px 2.5px 3px #FF5733;
-  -webkit-box-shadow: -2px -2px 2.5px 3px #FF5733;
-  box-shadow: -2px -2px 2.5px 3px #FF5733;
+  background-color: #FF5733;
 }
 
 .filter_shadow_orange{
@@ -45,11 +39,11 @@ body::-webkit-scrollbar-thumb{
 }
 
 .active{
-  @apply font-semibold underline
+  @apply transition duration-300 ease-in-out bg-orange-700 rounded-md py-2 px-4
 }
 
 .desactive{
-  @apply transition duration-300 ease-in-out hover:text-gray-300
+  @apply transition duration-300 ease-in-out bg-gray-700 hover:bg-orange-700 rounded-md py-2 px-4
 }
 
 .logo{

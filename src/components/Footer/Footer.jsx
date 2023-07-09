@@ -12,7 +12,7 @@ function Footer() {
         </div>
         <hr className="h-px my-8 bg-gray-200 border-0" />
         <section className="text-center text-slate-400">
-           Demo MoonTi created by: <b>Daniel Luna</b>.
+           Demo MoonTi creado por: <b>Daniel Luna</b>.
         </section>
       </div>
     </footer>
