@@ -1,6 +1,12 @@
 import { useState, Fragment } from "react";
-import { Dialog, Transition, Tab } from "@headlessui/react";
-import { LanguageDop } from "../../components/LanguageDop";
+import { Dialog, Transition } from "@headlessui/react";
+
+import LanguageDop from "@components/LanguageDop";
+import TechStack from "@components/TechStack";
+import ProjectItem from "@components/ProjectItem";
+import Section from "@components/Section";
+
+import imageProject from "@assets/imageProject/testimage11.jpg"
 
 function About() {
   let [isOpen, setIsOpen] = useState(false);
@@ -14,24 +20,34 @@ function About() {
   }
   return (
     <>
-      <div className="">
-        <button
+        <Section title="Proyectos personales">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5">
+            <ProjectItem title="Title" imageURL={imageProject} />
+            <ProjectItem title="Title" imageURL={imageProject} />
+            <ProjectItem title="Title" imageURL={imageProject} />
+          </div>
+        </Section>
+
+      <button
           type="button"
           onClick={openModal}
-          className="text-gray-200 absolute bottom-0 right-0 m-1 p-2 bg-gray-900 bg-opacity-90 hover:bg-opacity-100 rounded-md text-base min-[300px]:text-lg sm:text-xl transition duration-300 ease-out hover:ring-2 hover:ring-orange-700"
+          className=" p-2 bg-gray-900 bg-opacity-90 hover:bg-opacity-100 rounded-md text-base min-[300px]:text-lg sm:text-xl transition duration-300 ease-out hover:ring-2 hover:ring-[#FF5733]"
         >
           Stack Development
         </button>
-      </div>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-20" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-20 text-gray-200"
+          onClose={closeModal}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in duration-200"
+            leave="ease-in duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -43,57 +59,57 @@ function About() {
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
+                enterFrom="opacity-0 "
+                enterTo="opacity-100"
+                leave="ease-in duration-300"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
               >
-                <Dialog.Panel className="relative rounded-lg bg-white sm:my-8 sm:w-full sm:max-w-lg border-4 border-orange-700 saturate-150">
-                  <div className="bg-gray-800 relative p-4 sm:p-6">
-                    <button
-                      type="button"
-                      className="absolute right-0 top-0 m-3 rounded-md font-semibold text-gray-900 w-auto hover:scale-110 transition-transform"
-                      onClick={closeModal}
-                    >
-                      <img src="icon_close.svg" alt="icon_close" width="30px" />
-                    </button>
-                    <div className="sm:flex sm:items-start">
-                      <div className="mt-3 text-center sm:mt-0 sm:text-left">
+                <Dialog.Panel className="relative rounded-lg bg-white sm:my-8 sm:w-full sm:max-w-lg border-4 border-[#F53F18]">
+                  <div className="bg-gray-900 relative p-4 sm:p-6">
+                    <div className="text-left">
+                      <div className="flex flex-col w-full justify-between">
                         <Dialog.Title
                           as="h4"
-                          className="text-5xl flex  justify-between items-center font-semibold text-gray-100"
+                          className="text-5xl text-gray-100"
                         >
                           Mi vida - Stack
                         </Dialog.Title>
-                        <div className="py-3 flex flex-col gap-2 items-start">
-                          {/* <span className="bg-orange-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-white font-semibold">
-                            2015 - 2017
-                          </span> */}
-                          <Tab.Group>
-                            <Tab.List className="text-white">
-                              <Tab>Languages</Tab>
-                              <Tab>Frameworks</Tab>
-                              <Tab>Libraries</Tab>
-                              <Tab>Others</Tab>
-                            </Tab.List>
-                            <Tab.Panels>
-                              <Tab.Panel>Content 1</Tab.Panel>
-                              <Tab.Panel>Content 2</Tab.Panel>
-                              <Tab.Panel>Content 3</Tab.Panel>
-                              <Tab.Panel>Content 4</Tab.Panel>
-                            </Tab.Panels>
-                          </Tab.Group>
-                          {/* <div className="flex flex-col gap-2 justify-center mx-auto">
-                            <div className="bg-gray-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-orange-300 font-semibold">
-                              Plataform:{" "}
-                              <span className="text-orange-100">
-                                Windows | Linux{" "}
-                              </span>
-                            </div>
-                          </div> */}
-                        </div>
                       </div>
+                      <div className="flex flex-col gap-4 py-4">
+                        {/* <span className="bg-orange-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-white font-semibold">
+                          2015 - 2017
+                        </span> */}
+                        <TechStack title="Lenguajes">
+                          <LanguageDop name="HTML" color="bg-[#E34C26]" />
+                          <LanguageDop name="CSS" color="bg-[#563D7C]" />
+                          <LanguageDop name="JavaScript" color="bg-[#F1E05A]" />
+                          <LanguageDop name="Python" color="bg-[#3572A5]" />
+                          <LanguageDop name="C#" color="bg-[#178600]" />
+                        </TechStack>
+                        <TechStack title="Frameworks">
+                          <LanguageDop name="HTML" color="bg-[#E34C26]" />
+                          <LanguageDop name="CSS" color="bg-[#563D7C]" />
+                          <LanguageDop name="JavaScript" color="bg-[#F1E05A]" />
+                          <LanguageDop name="Python" color="bg-[#3572A5]" />
+                          <LanguageDop name="C#" color="bg-[#178600]" />
+                        </TechStack>
+                        {/* <div className="flex flex-col gap-2 justify-center mx-auto">
+                          <div className="bg-gray-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-orange-300 font-semibold">
+                            Plataform:{" "}
+                            <span className="text-orange-100">
+                              Windows | Linux{" "}
+                            </span>
+                          </div>
+                        </div> */}
+                      </div>
+                      <button
+                        type="button"
+                        className="py-2 px-4 rounded-md w-full text-lg bg-gray-800 hover:bg-red-800 transition duration-300 ease-out"
+                        onClick={closeModal}
+                      >
+                        Salir
+                      </button>
                     </div>
                   </div>
                 </Dialog.Panel>

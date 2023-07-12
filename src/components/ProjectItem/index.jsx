@@ -1,9 +1,8 @@
-import { Fragment, Suspense, lazy , useState } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import ProjectItemMenu from "@components/ProjectItem/Menu"
 
-const ProjectItemMenu = lazy(() => import("./ProjectItemMenu"))
-
-export function ProjectItem({ title, imageURL, githubURL }) {
+function ProjectItem({ title, imageURL, githubURL }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -15,14 +14,11 @@ export function ProjectItem({ title, imageURL, githubURL }) {
   }
   return (
     <article>
-      <h5 className="text-2xl min-[300px]:text-3xl">{title}</h5>
-      <div className="relative rounded-md bg-gray-800 border-4 border-gray-900 mt-2">
+      <h5 className="text-2xl min-[300px]:text-3xl pb-2 text-center">{title}</h5>
+      <div className="relative rounded-md bg-gray-800 border-4 border-gray-900">
         <div className="absolute p-2">
-          <Suspense fallback={null}>
             <ProjectItemMenu githubURL={githubURL} />
-          </Suspense>
         </div>
-
         <img
           className="absolute right-0 m-1.5 hover:-rotate-45 transition duration-500 ease-out"
           src="favicon.ico"
@@ -71,17 +67,6 @@ export function ProjectItem({ title, imageURL, githubURL }) {
                 >
                   <Dialog.Panel className="relative rounded-lg bg-white sm:my-8 sm:w-full sm:max-w-lg border-4 border-orange-700 saturate-150">
                     <div className="bg-gray-800 relative p-4 sm:p-6">
-                      <button
-                        type="button"
-                        className="absolute right-0 top-0 m-3 rounded-md font-semibold text-gray-900 w-auto hover:scale-110 transition-transform"
-                        onClick={closeModal}
-                      >
-                        <img
-                          src="icon_close.svg"
-                          alt="icon_close"
-                          width="30px"
-                        />
-                      </button>
                       <div className="sm:flex sm:items-start">
                         <div className="mt-3 text-center sm:mt-0 sm:text-left">
                           <Dialog.Title
@@ -102,9 +87,9 @@ export function ProjectItem({ title, imageURL, githubURL }) {
                             </p>
                             <div className="flex flex-col gap-2 justify-center mx-auto">
                               <div className="bg-gray-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-orange-300 font-semibold">
-                                Plataform:{" "}
-                                <span className="text-orange-100">
-                                  Windows | Linux{" "}
+                                Plataformas:
+                                <span className="pl-1 text-orange-100">
+                                  Windows | Linux
                                 </span>
                               </div>
                             </div>
@@ -122,3 +107,5 @@ export function ProjectItem({ title, imageURL, githubURL }) {
     </article>
   );
 }
+
+export default ProjectItem;
