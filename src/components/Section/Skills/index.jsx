@@ -6,28 +6,19 @@ import TechStack from "@components/TechStack";
 
 function Skills() {
   return (
-    <div className="flex flex-col justify-between gap-12 lg:flex-row items-center w-full">
-      <div className="hidden relative lg:block">
-        <img
-          src={icon_idea}
-          alt="icon_idea"
-          className="absolute w-10 2xl:w-[45px] top-24 left-40 2xl:top-28 2xl:left-44 filter_shadow_yellow"
-          width="45px"
-          height="45px"
-          loading="lazy"
-          decoding="async"
-        />
+    <div className="flex flex-col justify-between gap-20 lg:flex-row items-center w-full">
+      <div className="hidden saturate-150 contrast-125 brightness-90 relative lg:block w-full">
         <img
           src={imageFreelancer}
           alt="imageFreelance"
-          className="filter_shadow_orange"
-          width="1280px"
-          height="1280px"
+          className="filter_shadow_orange p-6 rounded-md"
+          width="655px"
+          height="413px"
           loading="lazy"
           decoding="async"
         />
       </div>
-      <div className="flex flex-col gap-5 rounded-md bg-opacity-90 bg-gray-900 w-full p-8">
+      <div className="flex flex-col gap-6 w-full">
         <TechStack title="Lenguajes">
           <LanguageDop name="HTML" color="bg-[#E34C26]" />
           <LanguageDop name="CSS" color="bg-[#563D7C]" />

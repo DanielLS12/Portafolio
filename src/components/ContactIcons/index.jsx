@@ -5,10 +5,10 @@ import icon_email from '@assets/icons/icon_email.svg'
 function ContactIcons({ className }) {
 
   return (
-    <div className="flex flex-row gap-3 justify-center">
+    <div className="flex flex-row gap-6 justify-center">
       <a
         href="https://github.com/DanielLS12"
-        className={className}
+        className={`${className}`}
         target="_blank"
       >
         <img

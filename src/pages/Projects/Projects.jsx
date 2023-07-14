@@ -5,8 +5,11 @@ import LanguageDop from "@components/LanguageDop";
 import TechStack from "@components/TechStack";
 import ProjectItem from "@components/ProjectItem";
 import Section from "@components/Section";
+import Container from "@components/Container";
 
-import imageProject from "@assets/imageProject/testimage11.jpg"
+import imageProject from "@assets/imageProject/testimage11.jpg";
+import Introduction from "../../components/Introduction";
+import programming from "@assets/undraw/programming.svg";
 
 function About() {
   let [isOpen, setIsOpen] = useState(false);
@@ -18,25 +21,34 @@ function About() {
   function openModal() {
     setIsOpen(true);
   }
+  
   return (
-    <>
+    <Container>
+        <Introduction
+          welcomeMessage="Bienvenid@ a"
+          title="Mi Portafolio Web"
+          subtitle="Experiencias digitales increibles"
+          content="Descubre mi amplia variedad de proyectos en curso y finalizados. Sé testigo de mi progreso superando desafíos y lograr resultados exitosos. Siempre aprendiendo y dispuesto a compartir conocimientos 🤝. "
+          img={programming}
+          isAboutPage={false}
+        />
         <Section title="Proyectos personales">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5">
-            <ProjectItem title="Title" imageURL={imageProject} />
-            <ProjectItem title="Title" imageURL={imageProject} />
-            <ProjectItem title="Title" imageURL={imageProject} />
+            <ProjectItem title="Titulo 1" imageURL={imageProject} />
+            <ProjectItem title="Titulo 2" imageURL={imageProject} />
+            <ProjectItem title="Titulo 3" imageURL={imageProject} />
           </div>
         </Section>
 
-      <button
+      {/* <button
           type="button"
           onClick={openModal}
           className=" p-2 bg-gray-900 bg-opacity-90 hover:bg-opacity-100 rounded-md text-base min-[300px]:text-lg sm:text-xl transition duration-300 ease-out hover:ring-2 hover:ring-[#FF5733]"
         >
           Stack Development
-        </button>
+        </button> */}
 
-      <Transition appear show={isOpen} as={Fragment}>
+      {/* <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
           className="relative z-20 text-gray-200"
@@ -76,11 +88,11 @@ function About() {
                           Mi vida - Stack
                         </Dialog.Title>
                       </div>
-                      <div className="flex flex-col gap-4 py-4">
+                      <div className="flex flex-col gap-4 py-4"> */}
                         {/* <span className="bg-orange-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-white font-semibold">
                           2015 - 2017
                         </span> */}
-                        <TechStack title="Lenguajes">
+                        {/* <TechStack title="Lenguajes">
                           <LanguageDop name="HTML" color="bg-[#E34C26]" />
                           <LanguageDop name="CSS" color="bg-[#563D7C]" />
                           <LanguageDop name="JavaScript" color="bg-[#F1E05A]" />
@@ -93,7 +105,7 @@ function About() {
                           <LanguageDop name="JavaScript" color="bg-[#F1E05A]" />
                           <LanguageDop name="Python" color="bg-[#3572A5]" />
                           <LanguageDop name="C#" color="bg-[#178600]" />
-                        </TechStack>
+                        </TechStack> */}
                         {/* <div className="flex flex-col gap-2 justify-center mx-auto">
                           <div className="bg-gray-700 p-0.5 px-2 rounded-sm text-lg sm:text-base text-orange-300 font-semibold">
                             Plataform:{" "}
@@ -102,7 +114,7 @@ function About() {
                             </span>
                           </div>
                         </div> */}
-                      </div>
+                      {/* </div>
                       <button
                         type="button"
                         className="py-2 px-4 rounded-md w-full text-lg bg-gray-800 hover:bg-red-800 transition duration-300 ease-out"
@@ -117,8 +129,8 @@ function About() {
             </div>
           </div>
         </Dialog>
-      </Transition>
-    </>
+      </Transition> */}
+    </Container>
   );
 }
 

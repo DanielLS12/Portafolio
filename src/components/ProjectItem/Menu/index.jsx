@@ -27,12 +27,12 @@ export default function ProjectItemMenu() {
         enter="transition ease-out duration-100"
         enterFrom="transform scale-90"
         enterTo="transform scale-100"
-        leave="transition ease-in duration-75"
+        leave="transition ease-in duration-100"
         leaveFrom="transform scale-100"
         leaveTo="transform opacity-0 scale-0"
       >
         <Menu.Items
-          className="absolute mt-1 w-40 origin-top-left rounded-md bg-gray-900 bg-opacity-90 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="absolute mt-0.5 w-40 origin-top-left rounded-md bg-gray-900 bg-opacity-90 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
           onClick={() => setIsOpen(!isOpen)}

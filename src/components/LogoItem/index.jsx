@@ -13,7 +13,7 @@ function LogoItem({textSize}) {
       />
       <div className="my-auto ml-2">
         <h1 className={`${textSize} text-gray-200 transition-all hover:scale-105`}>
-          MoonTi Dev
+          MoonTi Bit
         </h1>
       </div>
     </Link>
