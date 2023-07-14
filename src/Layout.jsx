@@ -8,7 +8,7 @@ function Layout() {
     <>
       <Header/>
         <Suspense fallback={null}>
-          <main className="pt-[4.9em] pb-0.5 max-[1024px]:container xl:container mx-auto px-3 text-gray-200">
+          <main className="pt-[4.9em] pb-0.5 max-[1024px]:container xl:container mx-auto px-3">
               <Outlet/>
           </main>
         </Suspense>

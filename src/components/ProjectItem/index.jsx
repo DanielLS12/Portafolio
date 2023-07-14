@@ -14,7 +14,7 @@ function ProjectItem({ title, imageURL, githubURL }) {
   }
   return (
     <article>
-      <h5 className="text-2xl min-[300px]:text-3xl pb-4 text-center">{title}</h5>
+      <h5 className="text-2xl min-[300px]:text-3xl pb-4 text-center text-gray-200">{title}</h5>
       <div className="relative rounded-md bg-gray-800 border-4 border-gray-900">
         <div className="absolute p-2">
             <ProjectItemMenu githubURL={githubURL} />

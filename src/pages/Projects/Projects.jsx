@@ -28,7 +28,7 @@ function About() {
           welcomeMessage="Bienvenid@ a"
           title="Mi Portafolio Web"
           subtitle="Experiencias digitales increibles"
-          content="Descubre mi amplia variedad de proyectos en curso y finalizados. Sé testigo de mi progreso superando desafíos y lograr resultados exitosos. Siempre aprendiendo y dispuesto a compartir conocimientos 🤝. "
+          content="Descubre mi amplia variedad de proyectos en curso y finalizados. Siempre en constante mejora y dispuesto a compartir y enseñar conocimientos, estableciendo así una relación de colaboración y apoyo mutuo. 🤝 "
           img={programming}
           isAboutPage={false}
         />

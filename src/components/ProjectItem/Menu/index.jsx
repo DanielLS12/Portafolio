@@ -8,7 +8,7 @@ function classNames(...classes) {
 export default function ProjectItemMenu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Menu as="div" className="relative inline-block text-left z-10">
+    <Menu as="div" className="relative inline-block text-left z-10 text-gray-200">
       <Menu.Button
         className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-gray-900 bg-opacity-90 hover:bg-opacity-100  px-3 py-2 text-md font-semibold shadow-sm hover:ring-2 hover:ring-orange-700 transition duration-300 ease-out"
         onMouseEnter={() => setIsOpen(true)}
