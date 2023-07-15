@@ -3,8 +3,17 @@ import { NavLink } from "react-router-dom";
 
 const infoNavLinks = [
   {
-    title: "Proyectos",
+    name: "Inicio",
   },
+  {
+    name: "Proyectos"
+  },
+  {
+    name: "Sobre Mí"
+  },
+  {
+    name: "Habilidades"
+  }
 ];
 
 const Header = () => {
@@ -18,11 +27,11 @@ const Header = () => {
             <div className="text-white text-base min-[295px]:text-lg sm:text-xl flex flex-col gap-6 lg:gap-8 lg:flex-row">
               {infoNavLinks.map((data, index) => (
                 <NavLink
-                  to={`/${data.title}`}
+                  to={`/${data.name}`}
                   key={index}
-                  className={({ isActive }) => (isActive ? "bg-orange-700 rounded-md py-2 px-4" : "transition duration-300 ease-in-out bg-gray-700 hover:bg-orange-700 rounded-md py-2 px-4")}
+                  className={({ isActive }) => (isActive ? "text-[#FF3600]" : "transition duration-300 ease-in-out hover:text-gray-300")}
                 >
-                  {data.title}
+                  {data.name}
                 </NavLink>
               ))}
             </div>

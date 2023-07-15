@@ -1,19 +1,17 @@
 import imageFreelancer from "@assets/undraw/freelancer.svg";
-import icon_idea from "@assets/icons/icon_idea.svg";
-
 import LanguageDop from "@components/LanguageDop";
 import TechStack from "@components/TechStack";
 
 function Skills() {
   return (
-    <div className="flex flex-col justify-between gap-20 lg:flex-row items-center w-full">
+    <div className="flex flex-col justify-between gap-20 lg:flex-row items-center">
       <div className="hidden saturate-150 contrast-125 brightness-90 relative lg:block w-full">
         <img
           src={imageFreelancer}
           alt="imageFreelance"
           className="filter_shadow_orange p-6 rounded-md"
-          width="655px"
-          height="413px"
+          width="1280px"
+          height="720px"
           loading="lazy"
           decoding="async"
         />

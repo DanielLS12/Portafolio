@@ -11,7 +11,7 @@ import imageProject from "@assets/imageProject/testimage11.jpg";
 import Introduction from "../../components/Introduction";
 import programming from "@assets/undraw/programming.svg";
 
-function About() {
+function Portfolio() {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -33,7 +33,7 @@ function About() {
           isAboutPage={false}
         />
         <Section title="Proyectos personales">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-10">
             <ProjectItem title="Titulo 1" imageURL={imageProject} />
             <ProjectItem title="Titulo 2" imageURL={imageProject} />
             <ProjectItem title="Titulo 3" imageURL={imageProject} />
@@ -134,4 +134,4 @@ function About() {
   );
 }
 
-export default About;
+export default Portfolio;

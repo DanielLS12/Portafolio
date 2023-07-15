@@ -8,6 +8,7 @@ function ContactIcons({ className }) {
     <div className="flex flex-row gap-6 justify-center">
       <a
         href="https://github.com/DanielLS12"
+        title="GitHub"
         className={`${className}`}
         target="_blank"
       >
@@ -15,13 +16,14 @@ function ContactIcons({ className }) {
           src={icon_github}
           width="28px"
           height="28px"
-          alt="icon_github"
+          alt="github"
           loading='lazy'
           decoding='async'
         />
       </a>
       <a
         href="https://www.linkedin.com/in/daniel-josue-luna-sanchez-260126248/"
+        title="LinkedIn"
         className={className}
         target="_blank"
       >
@@ -29,17 +31,18 @@ function ContactIcons({ className }) {
           src={icon_linkedin}
           width="28px"
           height="28px"
-          alt="icon_linkedin"
+          alt="linkedin"
           loading='lazy'
           decoding='async'
         />
       </a>
       <a
         href="mailto:danielluna03012001@gmail.com"
+        title="Correo Electrónico"
         className={className}
         target="_blank"
       >
-        <img src={icon_email} width="28px" height="28px" alt="icon_email" loading='lazy' decoding='async'/>
+        <img src={icon_email} width="28px" height="28px" alt="email" loading='lazy' decoding='async'/>
       </a>
     </div>
   );

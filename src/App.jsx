@@ -1,8 +1,8 @@
 import { Routes,Route } from "react-router-dom";
 import { lazy } from "react";
 
-const Home = lazy(() => import("./pages/Home/Home"));
-const Projects = lazy(() => import("./pages/Projects/Projects"));
+const Home = lazy(() => import("./pages/Home"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 import Layout from './Layout'
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/Proyectos" element={<Projects />} />
+          <Route path="/Portafolio" element={<Portfolio />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes> 

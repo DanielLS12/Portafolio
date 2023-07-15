@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 
 function classNames(...classes) {
@@ -6,14 +6,10 @@ function classNames(...classes) {
 }
 
 export default function ProjectItemMenu() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <Menu as="div" className="relative inline-block text-left z-10 text-gray-200">
       <Menu.Button
         className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-gray-900 bg-opacity-90 hover:bg-opacity-100  px-3 py-2 text-md font-semibold shadow-sm hover:ring-2 hover:ring-orange-700 transition duration-300 ease-out"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-        onClick={() => setIsOpen(!isOpen)}
       >
         Options
         <svg className="-mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -23,7 +19,6 @@ export default function ProjectItemMenu() {
 
       <Transition
         as={Fragment}
-        show={isOpen}
         enter="transition ease-out duration-100"
         enterFrom="transform scale-90"
         enterTo="transform scale-100"
@@ -33,9 +28,6 @@ export default function ProjectItemMenu() {
       >
         <Menu.Items
           className="absolute mt-0.5 w-40 origin-top-left rounded-md bg-gray-900 bg-opacity-90 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          onClick={() => setIsOpen(!isOpen)}
         >
           <div className="py-1">
             <Menu.Item>
