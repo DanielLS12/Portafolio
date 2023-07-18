@@ -16,19 +16,18 @@ function Home() {
           subtitle="Experiencias digitales increibles"
           content="Descubre mi amplia variedad de proyectos en curso y finalizados. Siempre en constante mejora y dispuesto a compartir y enseñar conocimientos, estableciendo así una relación de colaboración y apoyo mutuo. 🤝 "
           img={programming}
-          isAboutPage={false}
         />
-      <Section title="Proyectos personales">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-10">
+      <Section id="projects" title="Proyectos Personales">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 sm:gap-5">
           <ProjectItem title="Titulo 1" imageURL={imageProject} />
           <ProjectItem title="Titulo 2" imageURL={imageProject} />
           <ProjectItem title="Titulo 3" imageURL={imageProject} />
         </div>
       </Section>
-      <Section title="Sobre Mí">
+      <Section id="aboutme" title="Sobre Mí">
         <About/>
       </Section>
-      <Section title="Habilidades">
+      <Section id="skills" title="Habilidades">
         <Skills/>
       </Section>
     </Container>

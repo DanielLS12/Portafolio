@@ -8,14 +8,13 @@ function About() {
         <span className="text-gray-200 text-[2.25rem] min-[456px]:text-5xl text-center sm:text-left">
           Hola comunidad
         </span>
-        <h2 className="text-5xl min-[456px]:text-6xl 2xl:text-7xl text-center sm:text-left font-bold text-[#FF3600]">
-          Me llamo Daniel Luna
-        </h2>
-        <div className="flex flex-col gap-2 sm:flex-row items-center justify-between">
-          <h3 className="text-gray-200 font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
-            Desarrollador Front end
-          </h3>
+        <div className="text-5xl min-[456px]:text-6xl 2xl:text-7xl text-center sm:text-left font-bold text-[#FF3600]">
+          <span>Me llamo&nbsp;</span>
+          <h2 className="inline-block">Daniel Luna</h2>
         </div>
+        <h3 className="text-gray-200 font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
+          Desarrollador FullStack
+        </h3>
         <p className="text-gray-300 leading-10 text-left text-[1.1rem] min-[456px]:text-[1.25rem]">
             Dedicado a brindar servicios digitales con diferentes tecnologías. En
             busca de oportunidades para afrontar nuevos retos y resolver problemas

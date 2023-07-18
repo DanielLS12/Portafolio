@@ -28,6 +28,7 @@ function Skills() {
           <LanguageDop name="Django" color="bg-[#5F8CB2]" />
           <LanguageDop name="React" color="bg-[#24D1F5]" />
           <LanguageDop name="ASP.NET" color="bg-[#699E87]" />
+          <LanguageDop name="Tailwind CSS" color="bg-[#4682B4]" />
         </TechStack>
         <TechStack title="Entornos de desarrollo y base de datos">
           <LanguageDop name="Visual Studio" color="bg-[#6495ED]" />

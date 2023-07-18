@@ -1,8 +1,6 @@
 import ContactIcons from "@components/ContactIcons"
-import LogoItem from "@components/LogoItem";
 
 function Footer() {
-  console.log("Footer render")
   return (
     <footer className="max-[1024px]:container xl:container mx-auto px-3">
       <div className="border-t-2 py-8">

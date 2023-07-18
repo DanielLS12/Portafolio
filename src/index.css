@@ -16,22 +16,16 @@ body::-webkit-scrollbar-thumb{
   background-color: #FF3600;
 }
 
-.neumorphism{
-  border-radius: 10px;
-background: linear-gradient(145deg, #0f1623, #121a2a);
-box-shadow:  12px 12px 24px #0b0f19,
-             -12px -12px 24px #172135;
-}
-
 .filter_shadow_orange{
   filter: drop-shadow(0px 0px 8px #FF4500);
   box-shadow: 0px 0px 16px 2px #FF4500
-/*   -webkit-animation-name: animate_float;
-  animation-name: animate_float;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out; */
+}
+
+.auto_grid{
+  display:grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  justify-content: center;
 }
 
 .logo_animate{

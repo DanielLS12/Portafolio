@@ -15,18 +15,21 @@ function ProjectItem({ title, imageURL, githubURL }) {
   return (
     <article>
       <h5 className="text-2xl min-[300px]:text-3xl pb-4 text-center text-gray-200">{title}</h5>
-      <div className="relative rounded-md bg-gray-800 border-4 border-gray-900">
-        <div className="absolute p-2">
+      <div className="relative rounded-md bg-gray-800">
+        <div className="absolute p-1">
             <ProjectItemMenu githubURL={githubURL} />
         </div>
-        <img
-          className="absolute right-0 m-1.5 hover:-rotate-45 transition duration-500 ease-out"
-          src="favicon.ico"
-          alt="logoEmpresa"
-          width="48px"
-          height="48px"
-          loading="lazy"
-        />
+        <a href="#" title="Ver proyecto">
+          <img
+            className="absolute right-0 m-1 hover:-rotate-45 transition duration-500 ease-out"
+            src="favicon.ico"
+            alt="logoEmpresa"
+            width="48px"
+            height="48px"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
         <img
           src="https://neoattack.com/wp-content/uploads/2019/04/logotipo.jpg"
           alt="project_1"
@@ -34,14 +37,9 @@ function ProjectItem({ title, imageURL, githubURL }) {
           width="800px"
           height="800px"
           loading="lazy"
+          decoding="async"
         />
-        <button
-          type="button"
-          onClick={openModal}
-          className="text-gray-200 absolute bottom-0 right-0 m-1 p-2 bg-gray-900 bg-opacity-90 hover:bg-opacity-100 rounded-md text-base min-[300px]:text-lg sm:text-xl transition duration-300 ease-out hover:ring-2 hover:ring-orange-700"
-        >
-          Stack Development
-        </button>
+        
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-20" onClose={closeModal}>
             <Transition.Child
