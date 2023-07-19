@@ -1,11 +1,12 @@
 import LogoItem from "@components/LogoItem";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import { Link as LinkScroll } from "react-scroll";
 
 const infoNavLinks = [
   {
-    id: "",
-    name: "Inicio",
+    id: "home",
+    name : "Inicio"
   },
   {
     id: "projects",
@@ -29,13 +30,19 @@ function Header (){
           <LogoItem sizeTextNameLogo="text-2xl"/>
           <nav className="text-white text-xl hidden lg:flex flex-col gap-8 lg:flex-row">
             {infoNavLinks.map((data) => (
-              <a
+              <LinkScroll
+                title={data.name}
                 href={`#${data.id}`}
+                to={`${data.id}`}
+                spy={true}
+                smooth={true}
+                offset={data.id == 'home' ? -200 : -20}
+                duration={500}
                 key={data.id}
                 className="transition-color duration-300 ease-in-out lg:hover:text-gray-300"
               >
                 {data.name}
-              </a>
+              </LinkScroll>
             ))}
           </nav>
           <Menu as="div" className="w-12 h-12 fixed bottom-7 right-3 z-10 lg:hidden bg-white p-2 rounded-md">
@@ -53,19 +60,24 @@ function Header (){
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items as="nav" className="fixed bg-white rounded-md right-3 bottom-20">
-                <div className="text-xl flex flex-col">
-                  {infoNavLinks.map((data) => (
-                    <Menu.Item key={data.id}>
-                      <a
-                        href={`#${data.id}`}
-                        className="transition-color p-4 duration-300 ease-in-out text-black lg:hover:text-gray-300"
-                      >
-                        {data.name}
-                      </a>
-                    </Menu.Item>
-                  ))}
-                </div>
+              <Menu.Items as="ul" className="fixed bg-white rounded-md right-3 bottom-20">
+                {infoNavLinks.map((data) => (
+                  <Menu.Item as="li" key={data.id} className="text-xl flex flex-col">
+                    <LinkScroll
+                      title={data.name}
+                      href={`#${data.id}`}
+                      to={`${data.id}`}
+                      spy={true}
+                      smooth={true}
+                      offset={data.id == 'home' ? -150 : 20}
+                      duration={500}
+                      className="transition-color rounded-md p-4 duration-300 ease-in-out text-black lg:hover:text-gray-300"
+                      activeClass="ring-2 ring-[#FF3600]"
+                    >
+                      {data.name}
+                    </LinkScroll>
+                  </Menu.Item>
+                ))}
               </Menu.Items>
             </Transition>
           </Menu>

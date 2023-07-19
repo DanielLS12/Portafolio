@@ -2,14 +2,14 @@ import icon_github from '@assets/icons/icon_github.svg'
 import icon_linkedin from '@assets/icons/icon_linkedin.svg'
 import icon_email from '@assets/icons/icon_email.svg'
 
-function ContactIcons({ className }) {
+function ContactIcons() {
 
   return (
-    <div className="flex flex-row gap-6 justify-center">
+    <div className="flex flex-row gap-10 justify-center">
       <a
         href="https://github.com/DanielLS12"
         title="GitHub"
-        className={`${className}`}
+        className="custom_contact_icons"
         rel="noreferrer noopener"
         target="_blank"
       >
@@ -25,7 +25,7 @@ function ContactIcons({ className }) {
       <a
         href="https://www.linkedin.com/in/daniel-josue-luna-sanchez-260126248/"
         title="LinkedIn"
-        className={className}
+        className="custom_contact_icons"
         rel="noreferrer noopener"
         target="_blank"
       >
@@ -41,7 +41,7 @@ function ContactIcons({ className }) {
       <a
         href="mailto:danielluna03012001@gmail.com"
         title="Correo Electrónico"
-        className={className}
+        className="custom_contact_icons"
         rel="noreferrer noopener"
         target="_blank"
       >

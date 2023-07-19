@@ -15,15 +15,15 @@ function About() {
         <h3 className="text-gray-200 font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
           Desarrollador FullStack
         </h3>
-        <p className="text-gray-300 leading-10 text-left text-[1.1rem] min-[456px]:text-[1.25rem]">
+        <p className="text-gray-200 leading-10 text-left text-[1.1rem] min-[456px]:text-[1.25rem]">
             Dedicado a brindar servicios digitales con diferentes tecnologías. En
             busca de oportunidades para afrontar nuevos retos y resolver problemas
             del mundo real en código. Apasionado por la programación 💻, la música
             🎵 y las películas de ciencia ficción y sobrenatural 🎬.
         </p>
         <div className="flex flex-col gap-5 sm:flex-row justify-between items-center">
-          <ContactIcons className="custom_contact_icons" />
-          <button className="bg-gray-300 font-semibold p-4 text-lg rounded-md hover:ring-2 hover:ring-[#FF3600] transition duration-300 ease-in-out w-full sm:w-auto">
+          <ContactIcons/>
+          <button className="bg-gray-300 font-semibold p-4 text-lg rounded-md transition duration-300 ease-in-out w-full sm:w-auto hover:bg-gray-200 hover:ring-2 hover:ring-[#FF3600]">
             Descargar Curriculum
           </button>
         </div>

@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 function LogoItem({sizeTextNameLogo}) {
   return (
-    <Link to="/" className="flex">
+    <LinkScroll title="Inicio" href="#home" to={`home`}
+    spy={true}
+    smooth={true}
+    offset={-200}
+    duration={500} className="flex cursor-pointer">
       <img
         src="favicon.ico"
         className="logo logo_animate"
@@ -16,7 +20,7 @@ function LogoItem({sizeTextNameLogo}) {
           MoonTi Bit
         </h1>
       </div>
-    </Link>
+    </LinkScroll>
   );
 }
 

@@ -5,11 +5,12 @@ function Footer() {
     <footer className="max-[1024px]:container xl:container mx-auto px-3">
       <div className="border-t-2 py-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-4">
-            <span className="text-xl text-slate-400">Contactos:</span><ContactIcons className="custom_contact_icons"/>
+          <div className="flex items-center gap-4 flex-col md:flex-row">
+            <div className="text-xl text-slate-400">Contactos:</div>
+            <ContactIcons/>
           </div>
-          <div className="text-center text-lg text-slate-400">  
-              MoonTi Bit creado por: <b>Daniel Luna</b>.
+          <div className="text-center text-xl text-slate-400">  
+              MoonTi Bit creado por: <span className="font-bold">Daniel Luna</span>.
           </div>
         </div>
       </div>
