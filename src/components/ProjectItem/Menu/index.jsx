@@ -1,4 +1,3 @@
-import { Menu, Transition,Dialog } from "@headlessui/react";
 import { Fragment, useState } from "react";
 
 function classNames(...classes) {
@@ -6,18 +5,25 @@ function classNames(...classes) {
 }
 
 function ProjectItemMenu() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [showInfoModal, setShowInfoModal] = useState(false);
+  const [showStackModal,setShowStackModal] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(!isOpen);
+  const openInfoModal = () => {
+    setShowInfoModal(!showInfoModal);
   }
+
+  const openStackModal = () => {
+    setShowStackModal(!showStackModal);
+  }
+
+  console.log("ProyectItemMenu")
   
   return (
     <Menu
       as="div"
       className="relative inline-block text-left z-10 text-gray-900 font-semibold"
     >
-      <Menu.Button as="button" className="inline-flex justify-center gap-x-1.5 rounded-md bg-gray-300 hover:bg-gray-200 p-[15px] text-base font-semibold  hover:ring-2 hover:ring-[#FF3600] transition duration-300 ease-out" aria-label="Abrir opciones">
+      <Menu.Button as="button" className="inline-flex justify-center gap-x-1.5 rounded-md bg-gray-300 hover:bg-gray-200 p-[15px] font-semibold hover:ring-2 hover:ring-[#FF3600] transition duration-300 ease-out" aria-label="Abrir opciones">
         Opciones
         <svg className=" h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
           <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" />
@@ -34,7 +40,7 @@ function ProjectItemMenu() {
         leaveTo="transform opacity-0"
       >
         <Menu.Items className="mt-1 origin-top-left rounded-md bg-gray-900 shadow-lg p-2">
-          <div className="grid grid-cols-2 gap-2 text-center text-base">
+          <div className="grid grid-cols-2 gap-2 text-center">
             <Menu.Item>
               {({ active }) => (
                 <a
@@ -46,7 +52,7 @@ function ProjectItemMenu() {
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  Ver proyecto
+                  Visitar proyecto
                 </a>
               )}
             </Menu.Item>
@@ -72,7 +78,7 @@ function ProjectItemMenu() {
                     active &&
                       "ring-2 ring-[#FF3600]"
                   )} block p-[0.93rem] bg-gray-300 hover:bg-gray-200  rounded-md transition duration-300 ease-out`}
-                  onClick={openModal}
+                  onClick={openInfoModal}
                 >
                   Más información
                 </button>
@@ -85,6 +91,7 @@ function ProjectItemMenu() {
                     active &&
                       "ring-2 ring-[#FF3600]"
                   )} block p-[0.93rem] bg-gray-300 hover:bg-gray-200 rounded-md transition duration-300 ease-out`}
+                  onClick={openStackModal}
                 >
                   Stack Tecnológico
                 </button>
@@ -93,8 +100,8 @@ function ProjectItemMenu() {
           </div>
         </Menu.Items>
       </Transition>
-      <Transition appear show={isOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-20 " onClose={openModal}>
+      <Transition appear show={showInfoModal} as={Fragment}>
+          <Dialog as="div" className="relative z-20 " onClose={openInfoModal}>
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -118,9 +125,9 @@ function ProjectItemMenu() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="rounded-md sm:my-8 sm:max-w-lg border-2 p-6 bg-[#111827] border-[#FF3600]">
+                  <Dialog.Panel className="rounded-md sm:my-8 sm:max-w-lg w-full border-2 p-6 bg-[#111827] border-[#FF3600]">
                     <div className="relative sm:flex sm:items-start">
-                      <button className="absolute right-0 p-0.5 bg-gray-300 rounded-md hover:bg-gray-200 hover:ring-2 hover:ring-[#FF3600] transition duration-300 ease-out" onClick={openModal}>
+                      <button className="absolute right-0 p-0.5 bg-gray-300 rounded-md hover:bg-gray-200 hover:ring-2 hover:ring-[#FF3600] transition duration-300 ease-out" onClick={openInfoModal}>
                         <svg  fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FF3600" className="w-6 h-6 min-[360px]:w-8 min-[360px]:h-8">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -133,16 +140,21 @@ function ProjectItemMenu() {
                           Titulo
                         </Dialog.Title>
                         <div className="py-3 flex flex-col gap-4 items-start">
-                          <span className="bg-[#FF3600] p-0.5 px-2 rounded-sm text-sm min-[360px]:text-base text-white font-semibold">
-                            2015 - 2017
-                          </span>
+                          <div className="flex flex-row gap-4">
+                            <span className="bg-gray-700 p-0.5 px-2 rounded-md text-sm min-[360px]:text-base text-white font-semibold">
+                              2015 - 2017
+                            </span>
+                            <span className="bg-blue-800 p-0.5 px-2 rounded-md text-sm min-[360px]:text-base text-white font-semibold">
+                              Información
+                            </span>
+                          </div>
                           <p className="text-sm min-[360px]:text-lg text-left text-gray-200 leading-relaxed">
                             Este proyecto tiene la finalidad de brindar un
                             sistema de gestión de usuarios, con el fin de que
                             puedan sentirse comodos al momento de realizar el
                             pago de sus servicios en tiempo real.
                           </p>
-                          <div className="bg-gray-800 py-0.5 px-2 rounded-sm text-sm min-[360px]:text-base text-orange-400 font-semibold">
+                          <div className="bg-gray-800 py-1 px-2 rounded-md text-sm min-[360px]:text-base text-orange-400 font-semibold">
                             Plataformas:
                             <span className="pl-1 text-orange-200">
                               Windows | Linux
@@ -157,6 +169,7 @@ function ProjectItemMenu() {
             </div>
           </Dialog>
         </Transition>
+        
     </Menu>
   );
 }

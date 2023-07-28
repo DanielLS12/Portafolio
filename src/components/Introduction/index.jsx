@@ -13,13 +13,13 @@ function Introduction(props) {
           <h3 className="text-gray-200 font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
             {subtitle}
           </h3>   
-          <p className="text-gray-200 leading-10 text-left text-[1.1rem] min-[456px]:text-[1.25rem]">
+          <p className="text-gray-200 leading-10 text-left text-[1.2rem] min-[456px]:text-[1.3rem]">
             {content}
           </p>         
         </div>
         <div className="px-5 saturate-150 lg:px-0 contrast-125 brightness-90 hidden lg:block w-full">
           <img
-            className="ml-auto rounded-md filter_shadow_orange p-6"
+            className="ml-auto rounded-md p-6 filter_shadow_orange"
             src={img}
             width="493px"
             height="507px"

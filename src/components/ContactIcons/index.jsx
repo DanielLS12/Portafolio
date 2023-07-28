@@ -1,6 +1,6 @@
-import icon_github from '@assets/icons/icon_github.svg'
-import icon_linkedin from '@assets/icons/icon_linkedin.svg'
-import icon_email from '@assets/icons/icon_email.svg'
+import icon_github from '@assets/icons/github.svg'
+import icon_linkedin from '@assets/icons/linkedin.svg'
+import icon_email from '@assets/icons/email.svg'
 
 function ContactIcons() {
 
