@@ -1,17 +1,37 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { Transition, Dialog } from "@headlessui/react";
 import LanguageDop from "@components/LanguageDop";
 import TechStack from "@components/TechStack";
+import useObserver from "@hooks/useObserver";
 
 function ProjectItem({ title, content, proyectImage, proyectURL, githubURL }) {
   const [showStackModal, setShowStackModal] = useState(false);
+  const [observer,setElements,entries] = useObserver({
+    threshold: 0.10,
+    root: null
+  });
 
+  useEffect(() => {
+    const projects = document.querySelectorAll(".loading");
+    setElements(projects);
+  },[setElements]);
+
+  useEffect(() => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const lazyCard = entry.target;
+        lazyCard.classList.remove("loading");
+        lazyCard.classList.add("loaded");
+        observer.unobserve(lazyCard);
+      }
+    });
+  },[entries,observer]);
+  
   const openStackModal = () => {
     setShowStackModal(!showStackModal);
   };
-
   return (
-    <article className="relative rounded-md bg-gray-800 flex flex-col filter_shadow_orange">
+    <article className="flex flex-col rounded-md bg-gray-800 filter_shadow_orange loading">
       <div className="saturate-150">
         <img
           src={proyectImage}
@@ -24,15 +44,15 @@ function ProjectItem({ title, content, proyectImage, proyectURL, githubURL }) {
         />
       </div>
       <div className="p-4 sm:p-5 flex flex-col gap-4 h-full">
-        <h5 className="text-4xl text-[#FF3600] font-semibold">{title}</h5>
-        <p className="text-[1.2rem] min-[456px]:text-[1.3rem] text-gray-200 leading-9">{content}</p>
+        <h5 className="text-3xl min-[456px]:text-4xl text-[#FF3600] font-semibold">{title}</h5>
+        <p className="text-[1.1rem] min-[456px]:text-[1.3rem] text-gray-200 ">{content}</p>
         <div className="grid gap-4 mt-auto">
           <a
             title="Visitar proyecto"
             href={proyectURL}
             target="_blank"
             rel="noreferrer noopener"
-            className="text-gray-900 text-lg font-semibold p-[0.93rem] bg-gray-300 hover:bg-gray-200  rounded-md transition duration-300 ease-out hover:ring-2 hover:ring-[#FF3600] text-center inline-flex items-center justify-center"
+            className="text-gray-900 text-lg min-[456px]:text-xl font-semibold p-[0.93rem] bg-gray-300 hover:bg-gray-100  rounded-md transition duration-300 ease-out hover:ring-2 hover:ring-[#FF3600] text-center inline-flex items-center justify-center"
           >
             Visitar proyecto
           </a>
@@ -41,11 +61,11 @@ function ProjectItem({ title, content, proyectImage, proyectURL, githubURL }) {
             href={githubURL}
             target="_blank"
             rel="noreferrer noopener"
-            className="text-gray-900 text-lg  font-semibold p-[0.93rem] bg-gray-300 hover:bg-gray-200  rounded-md transition duration-300 ease-out hover:ring-2 hover:ring-[#FF3600] text-center inline-flex items-center justify-center"
+            className="text-gray-900 text-lg min-[456px]:text-xl  font-semibold p-[0.93rem] bg-gray-300 hover:bg-gray-100  rounded-md transition duration-300 ease-out hover:ring-2 hover:ring-[#FF3600] text-center inline-flex items-center justify-center"
           >
             Ver código
           </a>
-          <button className="text-gray-900 text-lg font-semibold p-[0.93rem] bg-gray-300 hover:bg-gray-200  rounded-md transition duration-300 ease-out hover:ring-2 hover:ring-[#FF3600] min-[341px]:col-span-2" onClick={openStackModal}>
+          <button className="text-gray-900 text-lg min-[456px]:text-xl font-semibold p-[0.93rem] bg-gray-300 hover:bg-gray-100  rounded-md transition duration-300 ease-out hover:ring-2 hover:ring-[#FF3600] min-[368px]:col-span-2" onClick={openStackModal}>
             Stack de desarrollo
           </button>
         </div>
@@ -54,7 +74,7 @@ function ProjectItem({ title, content, proyectImage, proyectURL, githubURL }) {
         <Dialog as="div" className="relative z-20 " onClose={openStackModal}>
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
+            enter="ease-out duration-300 "
             enterFrom="opacity-0"
             enterTo="opacity-100"
             leave="ease-in duration-200"
@@ -68,15 +88,15 @@ function ProjectItem({ title, content, proyectImage, proyectURL, githubURL }) {
             <div className="flex min-h-full items-center justify-center text-center px-3">
               <Transition.Child
                 as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
+                enter="ease-linear duration-300"
+                enterFrom="opacity-0 -translate-x-16"
+                enterTo="opacity-100"
+                leave="ease-linear duration-200 -translate-x-16"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
               >
                 <Dialog.Panel className="rounded-md sm:my-8 sm:max-w-lg w-full border-2 p-6 min-[360px]:p-8 bg-gray-800 border-[#FF3600]">
-                  <div className="relative sm:flex sm:items-start ">
+                  <div className="relative sm:flex sm:items-start">
                     <button
                       className="absolute right-0 p-0.5 bg-gray-300 rounded-md hover:bg-gray-200 hover:ring-2 hover:ring-[#FF3600] transition duration-300 ease-out"
                       onClick={openStackModal}

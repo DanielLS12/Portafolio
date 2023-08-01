@@ -3,8 +3,8 @@ function Introduction(props) {
   return (
     <>
       <section id="home" className="flex flex-col justify-between gap-20 lg:flex-row items-center">
-        <div className="flex flex-col gap-4 sm:gap-5 w-full">
-          <span className="text-gray-200 text-4xl  min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
+        <div className="flex flex-col gap-2 w-full">
+          <span className="text-gray-200 font-semibold text-4xl  min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
             {welcomeMessage}
           </span>
           <h2 className="text-5xl min-[456px]:text-6xl 2xl:text-7xl text-center sm:text-left font-bold text-[#FF3600]">
@@ -13,7 +13,7 @@ function Introduction(props) {
           <h3 className="text-gray-200 font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
             {subtitle}
           </h3>   
-          <p className="text-gray-200 leading-10 text-left text-[1.2rem] min-[456px]:text-[1.3rem]">
+          <p className="text-gray-200 leading-9 text-left text-[1.2rem] min-[456px]:text-[1.3rem] sm:pt-3">
             {content}
           </p>         
         </div>

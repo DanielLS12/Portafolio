@@ -19,10 +19,10 @@ function Home() {
         img={programming}
       />
       <Section id="projects" title="PROYECTOS PERSONALES">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-14 sm:gap-8">
           <ProjectItem
             title="MoonTi Bit"
-            content="Este es mi primer portafolio para comenzar mi camino en el desarrollo web. Inspirado al ver algunos videos sobre youtubers revisando portafolios de sus seguidores, decidí hacerme el mío."
+            content="Mi primer portafolio para comenzar mi camino en el desarrollo web. Inspirado al ver algunos videos sobre youtubers revisando portafolios de sus seguidores, decidí hacerme el mío."
             proyectImage={moontibit}
             proyectURL="https://www.google.com.pe/?hl=es"
             githubURL="https://github.com/DanielLS12/Portafolio"

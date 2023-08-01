@@ -28,7 +28,7 @@ function Header() {
       <div className=" border-b-2 py-4">
         <div className="flex justify-center sm:justify-between items-center">
           <LogoItem sizeTextNameLogo="text-2xl" />
-          <nav className="text-white text-xl hidden lg:flex flex-col gap-8 lg:flex-row">
+          <nav className="hidden lg:flex flex-col gap-8 lg:flex-row">
             {links.map((link) => (
               <LinkScroll
                 title={link.name}
@@ -39,7 +39,7 @@ function Header() {
                 offset={link.id == "home" ? -200 : -20}
                 duration={500}
                 key={link.id}
-                className="transition-color duration-300 ease-in-out lg:hover:text-gray-300"
+                className="text-xl text-gray-200 transition-color duration-300 ease-linear lg:hover:text-[#FF3600]"
               >
                 {link.name}
               </LinkScroll>
