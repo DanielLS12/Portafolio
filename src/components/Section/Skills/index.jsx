@@ -5,7 +5,7 @@ import TechStack from "@components/TechStack";
 function Skills() {
   return (
     <div className="flex flex-col justify-between gap-20 lg:flex-row items-center">
-      <div className="hidden saturate-150 contrast-125 brightness-90 relative lg:block w-full">
+      <div className="hidden contrast-125 lg:block w-full">
         <img
           src={imageFreelancer}
           alt="imageFreelance"

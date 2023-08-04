@@ -6,7 +6,7 @@ function LogoItem({sizeTextNameLogo}) {
     spy={true}
     smooth={true}
     offset={-200}
-    duration={500} className="flex cursor-pointer">
+    duration={500} className="flex">
       <img
         src="favicon.ico"
         className="logo logo_animate"
@@ -16,7 +16,7 @@ function LogoItem({sizeTextNameLogo}) {
         loading="lazy"
       />
       <div className="my-auto ml-2">
-        <h1 className={`${sizeTextNameLogo} text-gray-200 transition-all hover:scale-105`}>
+        <h1 className={`${sizeTextNameLogo} text-gray-200`}>
           MoonTi Bit
         </h1>
       </div>

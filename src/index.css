@@ -46,7 +46,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .custom_contact_icons{
-  @apply bg-gray-300 rounded-md p-4 transition duration-500 ease-out hover:bg-gray-100 hover:ring-2 hover:ring-[#FF3600]
+  @apply bg-gray-300 rounded-md p-4 transition duration-300 ease-linear hover:bg-gray-100 hover:ring-2 hover:ring-[#FF3600]
 }
 
 @-webkit-keyframes animate_float{

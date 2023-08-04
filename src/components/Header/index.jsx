@@ -24,7 +24,7 @@ const links = [
 
 function Header() {
   return (
-    <header className="max-[1024px]:container xl:container mx-auto right-0 left-0 static lg:fixed z-20 px-3 bg-opacity-90 bg-gray-900">
+    <header className="max-[1024px]:container xl:container mx-auto right-0 left-0 static lg:fixed z-20 px-3 bg-opacity-95 bg-gray-900">
       <div className=" border-b-2 py-4">
         <div className="flex justify-center sm:justify-between items-center">
           <LogoItem sizeTextNameLogo="text-2xl" />

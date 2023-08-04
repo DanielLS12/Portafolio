@@ -4,9 +4,7 @@ import Skills from "@components/Section/Skills";
 import About from "@components/Section/About";
 import Container from "@components/Container";
 import programming from "@assets/undraw/programming.svg";
-import imageProject from "@assets/imageProject/testimage11.jpg";
-import moontibit from "@assets/imageProject/moontibit.png";
-import ProjectItem from "@components/ProjectItem";
+import Projects from "@components/Section/Projects";
 
 function Home() {
   return (
@@ -19,15 +17,7 @@ function Home() {
         img={programming}
       />
       <Section id="projects" title="PROYECTOS PERSONALES">
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-14 sm:gap-8">
-          <ProjectItem
-            title="MoonTi Bit"
-            content="Mi primer portafolio para comenzar mi camino en el desarrollo web. Inspirado al ver algunos videos sobre youtubers revisando portafolios de sus seguidores, decidí hacerme el mío."
-            proyectImage={moontibit}
-            proyectURL="https://www.google.com.pe/?hl=es"
-            githubURL="https://github.com/DanielLS12/Portafolio"
-          />
-        </div>
+        <Projects/>
       </Section>
       <Section id="aboutme" title="SOBRE MÍ">
         <About />
