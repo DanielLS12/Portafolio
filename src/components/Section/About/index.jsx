@@ -10,33 +10,30 @@ function About() {
           <h2 className="inline-block">Daniel Luna</h2>
         </div>
         <h3 className="text-[#FF3600] font-bold text-4xl min-[456px]:text-5xl text-center sm:text-left">
-          Desarrollador Backend
+          Desarrollador FullStack
         </h3>
         <div className="mx-auto sm:ml-0 block lg:hidden pt-2">
           <img
             className="rounded-md filter_shadow_orange"
             src={photo}
-            width="360px"
+            width="560px"
             height="690px"
             alt="myphoto"
             loading="lazy"
             decoding="async"
           />
         </div>
-        <div className="flex flex-col gap-4 text-gray-200 leading-9 text-[1.2rem] min-[456px]:text-[1.3rem] py-2">
+        <div className="flex flex-col gap-4 text-orange-100 leading-9 text-[1.2rem] min-[456px]:text-[1.3rem] py-2">
           <p>
-            Me dedico de manera autónoma al desarrollo, diseño, mantenimiento e implementación de aplicaciones web en diversas tecnologías. Actualmente, mi enfoque principal esta en mejorar mis habilidades en frameworks como <span className="text-[#FF3600]">React</span>, <span className="text-[#FF3600]">Django</span> y <span className="text-[#FF3600]">ASP.NET</span>.
+            Me dedico de manera autónoma al desarrollo, diseño, mantenimiento e implementación de aplicaciones web en diversas tecnologías. Actualmente, mi enfoque principal esta en mejorar mis habilidades en frameworks como <span className="text-[#FF5800] font-bold">Angular</span>, <span className="text-[#FF5800] font-bold">.NET</span> y <span className="text-[#FF5800] font-bold">ASP.NET</span>.
           </p>
           <p>
-            En mi búsqueda de nuevas oportunidades tras enfrentar limitaciones en mi carrera anterior, descubrí el fascinante mundo del desarrollo de software. Motivado por esta experiencia, decidí embarcarme en esta disciplina para continuar mi formación profesional. Finalmente, inclinándome al área del <span className="text-[#FF3600]">desarrollo web</span>.
+            En mi búsqueda de nuevas oportunidades tras enfrentar limitaciones en mi carrera anterior, descubrí el fascinante mundo del desarrollo de software. Motivado por esta experiencia, decidí embarcarme en esta disciplina para continuar mi formación profesional. Finalmente, inclinándome al área del <span className="text-[#FF5800] font-bold">desarrollo web</span>.
           </p>
           
         </div>
-        <div className="flex flex-col gap-4 sm:flex-row justify-between items-center sm:pt-4">
+        <div className="pt-4">
           <ContactIcons />
-          <button className="bg-gray-300 font-semibold p-4 text-lg min-[456px]:text-xl rounded-md transition duration-300 ease-linear w-full sm:w-auto hover:bg-gray-100 hover:ring-2 hover:ring-[#FF3600]">
-            Descargar CV
-          </button>
         </div>
       </div>
       <div className="px-5 lg:px-0 hidden lg:block w-full">

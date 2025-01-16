@@ -10,13 +10,13 @@ function Home() {
   return (
     <Container>
       <Introduction
-        welcomeMessage="Bienvenid@ a"
-        title="Mi Portafolio Web"
-        subtitle="Experiencias digitales increibles"
+        welcomeMessage="Bienvenid@ a mi"
+        title="Portafolio Web"
+        subtitle="Diseño y Desarrollo Digital"
         content="Explora mi amplia variedad de proyectos y descubre aquellos que pueden llegar a interesarte. Siempre en constantes mejoras y dispuesto a compartirles mis habilidades y conocimientos. Estableciendo de esta manera una relación de colaboración y apoyo mutuo."
         img={programming}
       />
-      <Section id="projects" title="PROYECTOS PERSONALES">
+      <Section id="projects" title="PROYECTOS">
         <Projects/>
       </Section>
       <Section id="aboutme" title="SOBRE MÍ">
