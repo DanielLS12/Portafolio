@@ -1,5 +1,5 @@
 function Introduction(props) {
-  const {welcomeMessage, title, subtitle, content, img} = props;
+  const {welcomeMessage, title, subtitle, content, urlImg} = props;
   return (
     <>
       <section id="home" className="flex flex-col justify-between gap-20 lg:flex-row items-center">
@@ -19,8 +19,9 @@ function Introduction(props) {
         </div>
         <div className="lg:px-0 hidden lg:block w-full">
           <img
+            rel="preload"
             className="ml-auto rounded-md p-6 filter_shadow_orange"
-            src={img}
+            src={urlImg}
             width="493px"
             height="507px"
             alt="myphoto"

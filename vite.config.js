@@ -11,7 +11,9 @@ export default defineConfig({
       "@pages" : path.resolve(__dirname,'./src/pages'),
       "@hooks" : path.resolve(__dirname,'./src/hooks'),
       "@data" : path.resolve(__dirname, "./src/data"),
+      "@validations" : path.resolve(__dirname, "./src/validations"),
     },
   },
   plugins: [react()],
+  base: 'https://daniells12.github.io/Portafolio',
 })

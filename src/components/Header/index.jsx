@@ -2,25 +2,7 @@ import LogoItem from "@components/LogoItem";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { Link as LinkScroll } from "react-scroll";
-
-const links = [
-  {
-    id: "home",
-    name: "Inicio",
-  },
-  {
-    id: "projects",
-    name: "Proyectos",
-  },
-  {
-    id: "aboutme",
-    name: "Sobre Mí",
-  },
-  {
-    id: "skills",
-    name: "Habilidades",
-  },
-];
+import links from "@data/links"; 
 
 function Header() {
   return (
@@ -31,7 +13,7 @@ function Header() {
           <nav className="hidden lg:flex flex-col gap-8 lg:flex-row">
             {links.map((link) => (
               <LinkScroll
-                title={link.name}
+                title={link.title}
                 href={`#${link.id}`}
                 to={`${link.id}`}
                 spy={true}
@@ -41,7 +23,7 @@ function Header() {
                 key={link.id}
                 className="text-xl text-gray-200 transition-color duration-300 ease-linear lg:hover:text-[#FF3600]"
               >
-                {link.name}
+                {link.title}
               </LinkScroll>
             ))}
           </nav>
@@ -77,7 +59,7 @@ function Header() {
                 {links.map((link) => (
                     <LinkScroll
                       key={link.id}
-                      title={link.name}
+                      title={link.title}
                       href={`#${link.id}`}
                       to={`${link.id}`}
                       smooth={true}
@@ -86,7 +68,7 @@ function Header() {
                       className="transition-color rounded-md p-4 duration-300 ease-in-out text-gray-900 font-semibold lg:hover:text-gray-300"
                       activeClass="ring-2 ring-[#FF3600]"
                     >
-                        {link.name}
+                        {link.title}
                     </LinkScroll>
                 ))}
               </Menu.Items>

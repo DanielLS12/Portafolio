@@ -25,12 +25,12 @@ function About() {
         </div>
         <div className="flex flex-col gap-4 text-orange-100 leading-9 text-[1.2rem] min-[456px]:text-[1.3rem] py-2">
           <p>
-            Me dedico de manera autónoma al desarrollo, diseño, mantenimiento e implementación de aplicaciones web en diversas tecnologías. Actualmente, mi enfoque principal esta en mejorar mis habilidades en frameworks como <span className="text-[#FF5800] font-bold">Angular</span>, <span className="text-[#FF5800] font-bold">.NET</span> y <span className="text-[#FF5800] font-bold">ASP.NET</span>.
+            Me dedico de manera autónoma al desarrollo, diseño, mantenimiento e implementación de aplicaciones web en diversas tecnologías. Actualmente, mi enfoque principal esta en mejorar mis habilidades en frameworks como <span className="text-[#FF5800] font-bold">.NET Framework</span>, <span className="text-[#FF5800] font-bold">.NET</span> y <span className="text-[#FF5800] font-bold">ASP.NET</span>.
           </p>
           <p>
-            En mi búsqueda de nuevas oportunidades tras enfrentar limitaciones en mi carrera anterior, descubrí el fascinante mundo del desarrollo de software. Motivado por esta experiencia, decidí embarcarme en esta disciplina para continuar mi formación profesional. Finalmente, inclinándome al área del <span className="text-[#FF5800] font-bold">desarrollo web</span>.
-          </p>
-          
+            En mi búsqueda de nuevas oportunidades tras enfrentar limitaciones en mi carrera anterior, descubrí el fascinante mundo del desarrollo de software. Motivado por esta experiencia, decidí embarcarme en esta disciplina para continuar mi formación profesional, inclinándome más al área de la tecnología .NET.
+            Sin embargo, estoy abierto a explorar y aprender otras tecnologías como Java, Spring Boot o cualquier otra tecnología que me permita crecer profesionalmente y aportar valor a los proyectos en los que participe.
+          </p>      
         </div>
         <div className="pt-4">
           <ContactIcons />

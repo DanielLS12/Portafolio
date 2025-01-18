@@ -25,11 +25,16 @@ const techStacks = [
       },
       {
         id : 4,
+        name : techs.XAML.name,
+        color : techs.XAML.color,
+      },
+      {
+        id : 5,
         name : techs.Java.name,
         color : techs.Java.color,
       },
       {
-        id : 5,
+        id : 6,
         name : techs.CSharp.name,
         color : techs.CSharp.color,
       },
@@ -67,11 +72,16 @@ const techStacks = [
     techs : [
       {
         id : 1,
+        name : techs.VS.name,
+        color : techs.VS.color,
+      },
+      {
+        id : 2,
         name : techs.SQLServer.name,
         color : techs.SQLServer.color,
       },
       {
-        id : 2,
+        id : 3,
         name : techs.MySQL.name,
         color : techs.MySQL.color,
       },
@@ -90,6 +100,11 @@ const techStacks = [
         id : 2,
         name : techs.Git.name,
         color : techs.Git.color,
+      },
+      {
+        id : 3,
+        name : techs.Postman.name,
+        color : techs.Postman.color,
       },
     ]
   }

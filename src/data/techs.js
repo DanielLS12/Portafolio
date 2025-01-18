@@ -59,6 +59,10 @@ const techs = {
     name : ".NET",
     color : "bg-[#8E7DA7]",
   },
+  Postman : {
+    name : "Postman",
+    color : "bg-[#F76935]"
+  },
   JWT : {
     name : "JWT",
     color : "bg-[#E6EDF3]",
@@ -66,6 +70,10 @@ const techs = {
   Git : {
     name : "Git",
     color : "bg-[#FF5500]",
+  },
+  VS : {
+    name : "Visual Studio",
+    color : "bg-[#6495ED]",
   },
 };
 

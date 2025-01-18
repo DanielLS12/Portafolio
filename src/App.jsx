@@ -12,7 +12,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/Portafolio" element={<Home />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes> 

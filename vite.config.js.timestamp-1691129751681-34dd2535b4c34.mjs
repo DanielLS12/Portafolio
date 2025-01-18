@@ -9,7 +9,9 @@ var vite_config_default = defineConfig({
       "@assets": path.resolve(__vite_injected_original_dirname, "./src/assets"),
       "@components": path.resolve(__vite_injected_original_dirname, "./src/components"),
       "@pages": path.resolve(__vite_injected_original_dirname, "./src/pages"),
-      "@hooks": path.resolve(__vite_injected_original_dirname, "./src/hooks")
+      "@hooks": path.resolve(__vite_injected_original_dirname, "./src/hooks"),
+      "@data" : path.resolve(__vite_injected_original_dirname, "./src/data"),
+      "@validations" : path.resolve(__vite_injected_original_dirname, "./src/validations"),
     }
   },
   plugins: [react()]

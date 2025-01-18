@@ -17,7 +17,7 @@ function LogoItem({sizeTextNameLogo}) {
       />
       <div className="my-auto ml-2">
         <h1 className={`${sizeTextNameLogo} text-gray-200`}>
-          MoonTi Bit
+          Daniel JL
         </h1>
       </div>
     </LinkScroll>
