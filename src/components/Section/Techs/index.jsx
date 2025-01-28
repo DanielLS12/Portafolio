@@ -68,22 +68,17 @@ const techStacks = [
   },
   {
     id : 3,
-    title : 'Entornos de desarrollo y base de datos',
+    title : 'Base de datos',
     techs : [
       {
         id : 1,
-        name : techs.VS.name,
-        color : techs.VS.color,
-      },
-      {
-        id : 2,
         name : techs.SQLServer.name,
         color : techs.SQLServer.color,
       },
       {
-        id : 3,
-        name : techs.MySQL.name,
-        color : techs.MySQL.color,
+        id : 2,
+        name : techs.PostgreSQL.name,
+        color : techs.PostgreSQL.color,
       },
     ]
   },
@@ -103,6 +98,11 @@ const techStacks = [
       },
       {
         id : 3,
+        name : techs.GitHub.name,
+        color : techs.GitHub.color,
+      },
+      {
+        id : 4,
         name : techs.Postman.name,
         color : techs.Postman.color,
       },
@@ -132,29 +132,6 @@ function Skills() {
             ))}
           </TechStack>
         ))}
-        {/* <TechStack title="Lenguajes">
-          <LanguageDop name="HTML" color="bg-[#E34C26]" />
-          <LanguageDop name="CSS" color="bg-[#563D7C]" />
-          <LanguageDop name="JavaScript" color="bg-[#F1E05A]" />
-          <LanguageDop name="Java" color="bg-[#B07219]" />
-          <LanguageDop name="C#" color="bg-[#178600]" />
-        </TechStack>
-        <TechStack title="Frameworks y librerías">
-          <LanguageDop name="Spring Boot" color="bg-[#754C10]" />
-          <LanguageDop name="Angular" color="bg-[#FE0032]" />
-          <LanguageDop name="ASP.NET" color="bg-[#699E87]" />
-          <LanguageDop name="Tailwind CSS" color="bg-[#4682B4]" />
-        </TechStack>
-        <TechStack title="Base de datos">
-          <LanguageDop name="Visual Studio" color="bg-[#6495ED]" />
-          <LanguageDop name="MySQL" color="bg-[#FF6347]" />
-          <LanguageDop name="SQLServer" color="bg-[#B0C4DE]" />
-        </TechStack>
-        <TechStack title="Otras herramientas">
-          <LanguageDop name="Git" color="bg-[#FF5500]" />
-          <LanguageDop name="GitHub" color="bg-[#E6EDF3]" />
-          <LanguageDop name="Node.js" color="bg-[#659A60]" />
-        </TechStack> */}
       </div>
     </div>
   );

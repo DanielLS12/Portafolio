@@ -63,47 +63,41 @@ function Contact() {
     <form
       ref={form}
       onSubmit={handleSubmit(sendEmail)}
-      className="flex flex-col gap-2 mx-auto shadow-md bg-white w-full lg:w-1/2 2xl:w-1/3 p-4 rounded-sm"
+      className="flex flex-col gap-2.5 mx-auto bg-gray-900 dark:bg-white w-full lg:w-1/2 2xl:w-1/3 p-4 rounded-sm"
     >
-      <h4 className="text-2xl text-center underline">Contáctame</h4>
-      <div className="border-2 border-[#111827] rounded-sm p-2">
-        <input
-          className="outline-none placeholder-slate-400 w-full"
-          placeholder="Nombre"
-          readOnly={isLoading}
-          {...register("user_name")}
-        />
-      </div>
+      <h4 className="text-2xl text-center text-dark-title dark:text-title underline">Contáctame</h4>
+      <input
+        className="rounded-sm outline-none placeholder-slate-600 dark:placeholder-slate-400 w-full p-2 ring-2 dark:ring-black focus:ring-[#FF3600] dark:focus:ring-[#FF5800]"
+        placeholder="Nombre"
+        readOnly={isLoading}
+        {...register("user_name")}
+      />
       {errors.user_name?.message && (
-        <p className="text-red-600">{errors.user_name.message}</p>
+        <p className="text-red-300 dark:text-red-600">{errors.user_name.message}</p>
       )}
-      <div className="border-2 border-[#111827] rounded-sm p-2">
-        <input
-          className="outline-none placeholder-slate-400 w-full"
-          type="email"
-          placeholder="Correo"
-          readOnly={isLoading}
-          {...register("user_email")}
-        />
-      </div>
+      <input
+        className="outline-none placeholder-slate-600 dark:placeholder-slate-400 w-full rounded-sm p-2 ring-2 dark:ring-black focus:ring-[#FF3600] dark:focus:ring-[#FF5800]"
+        type="email"
+        placeholder="Correo"
+        readOnly={isLoading}
+        {...register("user_email")}
+      />
       {errors.user_email?.message && (
-        <p className="text-red-600">{errors.user_email.message}</p>
+        <p className="text-red-300 dark:text-red-600">{errors.user_email.message}</p>
       )}
-      <div className="border-2 border-[#111827] rounded-sm p-2">
-        <textarea
-          rows="9"
-          className="w-full h-full resize-none border-none focus:outline-none"
-          placeholder="Mensaje"
-          readOnly={isLoading}
-          {...register("message")}
-        ></textarea>
-      </div>
+      <textarea
+        rows="9"
+        className="w-full h-full resize-none rounded-sm placeholder-slate-600 dark:placeholder-slate-400 p-2 focus:outline-none ring-2 dark:ring-black focus:ring-[#FF3600] dark:focus:ring-[#FF5800]"
+        placeholder="Mensaje"
+        readOnly={isLoading}
+        {...register("message")}
+      ></textarea>
       {errors.message?.message && (
-        <p className="text-red-600">{errors.message.message}</p>
+        <p className="text-red-300 dark:text-red-600">{errors.message.message}</p>
       )}
       <button
         type="submit"
-        className="bg-[#FF5733] rounded-sm text-[#E3E7EF] font-bold p-2"
+        className="bg-[#fc512b] hover:bg-[#FF3600] transition-colors duration-300 ease-linear rounded-sm text-[#E3E7EF] font-bold p-2"
         disabled={isLoading}
       >
         {isLoading ? (

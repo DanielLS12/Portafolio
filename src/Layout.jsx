@@ -1,21 +1,17 @@
-import { Outlet } from "react-router-dom"
-import { Suspense } from "react";
-import Header from "@components/Header"
-import Footer from '@components/Footer'
-import Loader from "@components/Loader"
+import { Outlet } from "react-router-dom";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 
 function Layout() {
   return (
     <>
-      <Header/>
-        <Suspense fallback={<Loader size="w-40 h-40" color1="#FF3600" color2="#FFFFFF"/>}>
-          <main className="lg:pt-[4.9rem] pb-0.5 max-[1024px]:container xl:container mx-auto px-3">
-              <Outlet/>
-          </main>
-        </Suspense>
-      <Footer/>
+      <Header />
+      <main className="lg:pt-[4.9rem] pb-0.5 max-[1024px]:container xl:container mx-auto px-3 bg-orange-50 dark:bg-gray-900">
+        <Outlet />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

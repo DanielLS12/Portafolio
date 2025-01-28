@@ -1,11 +1,8 @@
 import { Routes,Route } from "react-router-dom";
-import { lazy } from "react";
-
-const Home = lazy(() => import("./pages/Home"));
-const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 import Layout from './Layout'
-
+import Home from "./pages/Home";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (

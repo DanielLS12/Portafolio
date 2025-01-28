@@ -11,7 +11,7 @@ function Home() {
         welcomeMessage="Bienvenid@ a mi"
         title="Portafolio Web"
         subtitle="Diseño y Desarrollo Digital"
-        content="Explora mi amplia variedad de proyectos y descubre aquellos que pueden llegar a interesarte. Siempre en constantes mejoras y dispuesto a compartirles mis habilidades y conocimientos. Estableciendo de esta manera una relación de colaboración y apoyo mutuo."
+        content="Explora mis proyectos que pueden llegar a interesarte. Estoy enfocado en ofrecer soluciones útiles y bien diseñadas, con atención al detalle y a las necesidades de los usuarios, además de estar dispuesto a compartir mis habilidades y conocimientos. Siempre abierto a nuevos retos que impulsen la innovación y la colaboración."
         urlImg={urlImg}
       />
       {links.filter(link => link.content).map(link => (

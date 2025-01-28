@@ -22,7 +22,7 @@ function ContactIcons() {
             loading='lazy'
             decoding='async'
           />
-          <span className='hidden min-[400px]:block text-xl font-bold'>
+          <span className='hidden min-[400px]:block text-xl'>
             GitHub
           </span>
         </div>
@@ -43,7 +43,7 @@ function ContactIcons() {
             loading='lazy'
             decoding='async'
           />
-          <span className='hidden min-[400px]:block text-xl font-bold'>
+          <span className='hidden min-[400px]:block text-xl'>
             LinkedIn
           </span>
         </div>
@@ -64,7 +64,7 @@ function ContactIcons() {
             loading='lazy' 
             decoding='async'
           />
-          <span className='hidden min-[400px]:block text-xl font-bold'>
+          <span className='hidden min-[400px]:block text-xl'>
             Email
           </span>
         </div>

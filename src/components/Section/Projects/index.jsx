@@ -1,13 +1,13 @@
-import carwash from "@assets/imageProject/carwash.png";
-import parkingapi from "@assets/imageProject/parkingapi.png";
-import parkingui from "@assets/imageProject/parkingui.png";
+import carwash from "@assets/projectsImage/carwash.png";
+import parkingapi from "@assets/projectsImage/parkingapi.png";
+import parkingui from "@assets/projectsImage/parkingui.png";
 import ProjectItem from "@components/ProjectItem";
 import techs from "@data/techs";
 
 const projects = [
   {
     id : 1,
-    title : "Carwash Montevideo",
+    title : "Autolavado Montevideo",
     content : "Desarrollé esta aplicación de Carwash en .NET Framework con el objetivo de optimizar la gestión operativa de un cliente, como parte de mis prácticas en la empresa. El sistema reemplaza los procesos manuales realizados en papel, facilitando la digitalización y el control eficiente de los servicios.",
     projectImage : carwash,
     techs : [
@@ -32,7 +32,7 @@ const projects = [
         color : techs.NetFramework.color,
       },
     ],
-    urlGitHub : "https://github.com/DanielLS12/Carwash-Montevideo",
+    urlGitHub : "https://github.com/DanielLS12/Autolavado-Montevideo",
   },
   {
     id : 2,
@@ -54,6 +54,11 @@ const projects = [
         id : 3,
         name : techs.CSharp.name,
         color : techs.CSharp.color,
+      },
+      {
+        id : 4,
+        name : techs.JWT.name,
+        color : techs.JWT.color,
       },
     ],
     urlWeb : "http://playamontevideo.somee.com/swagger/index.html",

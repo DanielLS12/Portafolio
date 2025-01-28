@@ -4,16 +4,16 @@ function Introduction(props) {
     <>
       <section id="home" className="flex flex-col justify-between gap-20 lg:flex-row items-center">
         <div className="flex flex-col gap-2 w-full">
-          <span className="text-gray-200 font-semibold text-4xl  min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
+          <span className="text-title dark:text-dark-title font-semibold text-4xl  min-[456px]:text-5xl 2xl:text-5xl text-center lg:text-left">
             {welcomeMessage}
           </span>
-          <h2 className="text-5xl min-[456px]:text-6xl 2xl:text-7xl text-center sm:text-left font-bold text-[#FF3600]">
+          <h2 className="text-5xl min-[456px]:text-6xl 2xl:text-7xl text-center lg:text-left font-bold text-[#FF3600]">
             {title}
           </h2>
-          <h3 className="text-gray-200 font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center sm:text-left">
+          <h3 className="text-title dark:text-dark-title font-semibold text-4xl min-[456px]:text-5xl 2xl:text-5xl text-center lg:text-left">
             {subtitle}
           </h3>   
-          <p className="text-orange-100 leading-9 text-[1.2rem] min-[456px]:text-[1.3rem] pt-2">
+          <p className="text-content dark:text-dark-content leading-9 text-[1.2rem] min-[456px]:text-[1.3rem] pt-2">
             {content}
           </p>         
         </div>

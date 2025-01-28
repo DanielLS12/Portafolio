@@ -7,6 +7,10 @@ const techs = {
     name: "JavaScript",
     color: "bg-[#F1E05A]",
   },
+  TS: {
+    name: "TypeScript",
+    color: "bg-[#3178C6]",
+  },
   react: {
     name: "React",
     color: "bg-[#24D1F5]",
@@ -65,14 +69,18 @@ const techs = {
   },
   JWT : {
     name : "JWT",
-    color : "bg-[#E6EDF3]",
+    color : "bg-[#FB015B]",
   },
   Git : {
     name : "Git",
     color : "bg-[#FF5500]",
   },
-  VS : {
-    name : "Visual Studio",
+  GitHub : {
+    name : "GitHub",
+    color : "bg-[#E6EDF3]",
+  },
+  PostgreSQL : {
+    name : "PostgreSQL",
     color : "bg-[#6495ED]",
   },
 };

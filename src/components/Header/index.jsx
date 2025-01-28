@@ -3,12 +3,13 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { Link as LinkScroll } from "react-scroll";
 import links from "@data/links"; 
+import ChangeTheme from "../ChangeTheme";
 
 function Header() {
   return (
-    <header className="max-[1024px]:container xl:container mx-auto right-0 left-0 static lg:fixed z-20 px-3 bg-opacity-95 bg-gray-900">
-      <div className=" border-b-2 py-4">
-        <div className="flex justify-center sm:justify-between items-center">
+    <header className="max-[1024px]:container xl:container mx-auto right-0 left-0 static lg:fixed z-20 px-3 bg-opacity-95 bg-orange-50 dark:bg-gray-900">
+      <div className="border-gray-900 dark:border-[#E5E7EB] border-b-2 py-4">
+        <div className="flex justify-center lg:justify-between items-center">
           <LogoItem sizeTextNameLogo="text-2xl" />
           <nav className="hidden lg:flex flex-col gap-8 lg:flex-row">
             {links.map((link) => (
@@ -21,12 +22,13 @@ function Header() {
                 offset={link.id == "home" ? -200 : -20}
                 duration={500}
                 key={link.id}
-                className="text-xl text-gray-200 transition-color duration-300 ease-linear lg:hover:text-[#FF3600]"
+                className="text-xl text-gray-900 dark:text-gray-200 transition-color duration-300 ease-linear lg:hover:text-[#FF3600]"
               >
                 {link.title}
               </LinkScroll>
             ))}
           </nav>
+          <ChangeTheme />
           <Menu
             as="div"
             className="w-12 h-12 fixed bottom-7 right-3 z-10 lg:hidden p-2 rounded-md"
@@ -37,7 +39,7 @@ function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={2.5}
                 stroke="#FF3600"
-                className="w-12 h-12 fixed bottom-7 right-3 lg:hidden bg-gray-200 focus:bg-gray-900 p-2 rounded-md"
+                className="w-12 h-12 fixed bottom-7 right-3 lg:hidden bg-gray-900 dark:bg-gray-200 transition-colors duration-300 ease-linear p-2 rounded-md"
               >
                 <path
                   strokeLinecap="round"
@@ -55,7 +57,7 @@ function Header() {
               leaveFrom="transform opacity-100"
               leaveTo="transform opacity-0"
             >
-              <Menu.Items className="fixed bg-gray-200 rounded-md right-3 bottom-20 text-xl flex flex-col">
+              <Menu.Items className="fixed bg-gray-900 dark:bg-gray-200 rounded-md right-3 bottom-20 text-xl flex flex-col">
                 {links.map((link) => (
                     <LinkScroll
                       key={link.id}
@@ -65,7 +67,7 @@ function Header() {
                       smooth={true}
                       offset={link.id == "home" ? -150 : 20}
                       duration={500}
-                      className="transition-color rounded-md p-4 duration-300 ease-in-out text-gray-900 font-semibold lg:hover:text-gray-300"
+                      className="transition-color rounded-md p-4 duration-300 ease-linear text-orange-50 dark:text-gray-900"
                       activeClass="ring-2 ring-[#FF3600]"
                     >
                         {link.title}
